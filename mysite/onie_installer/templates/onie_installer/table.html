@@ -1,0 +1,30 @@
+{% extends 'onie_installer/index.html' %}
+
+{% block table_block %}
+<table>
+<tr>
+  <th>IP</th>
+  <th>Name</th>
+  <th>Eth0 Mac Address</th>
+  <th>Switch Type</th>
+  <th>CPU Type </th>
+  <th>Discovery Stage</th>
+  <th>ONIE version </th>
+  <th>Date Discoevered</th> 
+</tr>
+{% for b in obj %}
+<tr>
+  <td>{{ b.ip }}</td>
+  <td>{{ b.name }}</td>
+  <td>{{ b.ethAddr }}</td>
+  <td>{{ b.machine }}</td>
+  <td>{{ b.arc }}</td>
+  <td>{{ b.operation }} </td>
+  <td>{{ b.version }}</td>
+  <td>{{ b.dateDiscovered }}</td>
+  
+</tr>
+{% endfor %}
+</table>
+
+{% endblock %}

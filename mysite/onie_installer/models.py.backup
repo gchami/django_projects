@@ -1,0 +1,16 @@
+from django.db import models
+
+# Create your models here.
+class Switch(models.Model):
+    IP = models.GenericIPAddressField(protocol='IPv4')
+    NAME = models.CharField(max_length=200)
+    SERIAL_NUMBER = models.CharField(max_length=200) 
+    ETH_ADDR = models.CharField(max_length=17)
+    VENDOR_ID = models.IntegerField()
+    MACHINE = models.CharField(max_length=200)
+    MACHINE_REV = models.IntegerField()
+    ARCH = models.CharField(max_length=20)
+    SECURITY_KEY = models.CharField(max_length=200) 
+    OPERATION = models.CharField(max_length=50)
+    VERSION = models.CharField(max_length=200)
+
